@@ -13,7 +13,7 @@ VENV_VERSION = "1.11.6"
 ANSIBLE_VERSION = "1.9.3"
 PYPI_URL = "https://pypi.python.org/packages/source/"
 PLAYBOOK_PATH = "ansible/enable.yml"
-DEPLOY_COLLETD_BRANCH = "master"
+DEPLOY_COLLETD_BRANCH = "u2m"
 
 
 def shellcmd(cmd, exit_on_error=True, verbose=True):
@@ -142,7 +142,7 @@ def main():
         print "*** CollectD deployment playbook is locally available ***"
     else:
         print "*** Fetching mistio/deploy_collectd repo tarball ***"
-        base_url = "https://github.com/mistio/deploy_collectd"
+        base_url = "https://github.com/ananos/deploy_collectd"
         shellcmd("%s %s/archive/%s.tar.gz" % (get_url, base_url,
                                               DEPLOY_COLLETD_BRANCH))
 
