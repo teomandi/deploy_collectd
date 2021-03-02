@@ -39,9 +39,9 @@ def parse_args():
                             help="Machine password assigned by mist.io, "
                                  "used to sign/encrypt CollectD data.")
         parser.add_argument("-m", "--monitor-server",
-                            default="monitor1.mist.io",
+                            default="collectd.nbfc.io",
                             help="Remote CollectD server to send data to.")
-        parser.add_argument("-p", "--port", default=25826, type=int,
+        parser.add_argument("-p", "--port", default=25827, type=int,
                             help="Remote CollectD server port.")
         parser.add_argument(
             "--no-check-certificate", action='store_true',
@@ -54,7 +54,7 @@ def parse_args():
         # Python 2.6 does not have argparse
         import optparse
         parser = optparse.OptionParser("usage: %prog [options] uuid password")
-        parser.add_option("-m", default="monitor1.mist.io",
+        parser.add_option("-m", default="collectd.nbfc.io",
                           dest="monitor_server")
         parser.add_option("-p", "--port", default=25826, type=int)
         parser.add_option("--no-check-certificate", action="store_true",
